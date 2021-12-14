@@ -10,11 +10,8 @@ int main(){
     scanf("%[^\n]s" , text);
 
     //gimatria
-<<<<<<< HEAD
     gimatria1(word,text);
-}
-=======
- 
+    
     
 }
->>>>>>> 369f643faf657835682e2ed4ee64ab9e0ae611ef
+
