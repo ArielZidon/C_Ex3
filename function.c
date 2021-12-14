@@ -16,14 +16,17 @@ void gimatria(char* word , char* copy){
 }
 
 void gimatria1(char* word, char* text){
+    int finel = 0;
+    
     int i = 0;
     int j = 0;
     int p = 0;
     int k = 0;
+    
     int sum = 0;
-    int  value = 0;
+    int value = 0;
 
-    char read [31];
+    char read [30];
     char res [1024];
 
     char wordC [31];
@@ -32,39 +35,54 @@ void gimatria1(char* word, char* text){
     gimatria(text,textC);
     value =  Value(wordC);
 
+    
+    while(text[i]!='~')
+    {
 
-    while(textC[i]!='~'){
-
-        if((textC[i]<'a' || textC[i]>'z') && text[i]==text[j]){
+        j = i;
+        
+        if((textC[i]<'a' || textC[i]>'z') && textC[i]==textC[j])
+        {
+            i++;
             continue;
         }
+        
+        while(textC[j]!='~')
+        {
 
-        while(text[j]!='~'){
-
-            if(textC[j]>='a' && textC[j]<='z'){
+            if(textC[j]>='a' && textC[j]<='z')
+            {
             sum+=textC[j];
             }
 
-            if(sum>value){
-                sum = 0;
+            read[p] = text[j];
+
+            if(sum>value)
+            {
+                clean(read);
                 break;
             }
 
-            if(sum==value){
-                sum = 0;
+            if(sum==value)
+            {
+                p++;
                 read[p]='~';
                 strcpy(res+k,read);
-                k = p;
+                k+=arr_size(read);
+                clean(read);
                 break;
             }
 
-            read[p] = text[j];
             j++;
             p++;
         }
-
-        
+        sum = 0;
+        p=0;
+        i++;
     }
+    int n = arr_size(res);
+    res[n-1] = '\0';
+    printf("%s\n",res);
 }
 
 
@@ -80,12 +98,22 @@ int Value(char* word){
     return sum;
 }
 
-
-
-void clean(char* res){
+void clean(char* read){
     int i = 0;
-    while(res[i]){
-        res[i] = '0';
+    while(read[i]){
+        read[i] = '\0';
         i++;
     }
+    read[0] = '\n';
+}
+
+int arr_size(char* text){
+    int i = 0;
+    int counter = 0;
+
+    while(text[i]){
+        counter++;
+        i++;
+    }
+    return counter;
 }

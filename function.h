@@ -11,3 +11,5 @@ int Value(char* word);
 
 void clean(char* res);
 
+int arr_size(char* text);
+
