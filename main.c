@@ -15,8 +15,7 @@ int main(){
     gimatria(word,word1);
     gimatria(text,text1);
    
-
-
+    // test to see if i can push to git
     
 
     printf("%s",word1);
