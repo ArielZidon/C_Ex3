@@ -11,17 +11,12 @@ int main(){
 
 
     //gimatria
-<<<<<<< HEAD
+
     gimatria1(word,text);
-
-}
-
-=======
-    gematria(word,text);
 
    //atbash
 
-}
+
 
 void toLowerCase(char* word){
 
@@ -33,4 +28,4 @@ void toLowerCase(char* word){
     }
     
 }
->>>>>>> 5b50864bc081a1b77c33296bd00f41337c09fbae
+}
