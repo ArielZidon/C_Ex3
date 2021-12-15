@@ -4,7 +4,7 @@
 #include <ctype.h>
 
 
-void gimatria(char* word , char* copy){
+void allToLitel(char* word , char* copy){
 
     int i = 0;
     strcpy(copy,word);
@@ -20,53 +20,57 @@ void gimatria(char* word , char* copy){
     
 }
 
-void gimatria1(char* word, char* text){
+void gimatria(char* word, char* text){
     int i = 0;
     int j = 0;
     int p = 0;
     int k = 0;
+    int c = 0;
     
     int sum = 0;
     int value = 0;
 
-    char read [30];     
+    char read [100];     
     char res [1024];
 
     char wordC [30];
     char textC [1024];
 
-    gimatria(word,wordC);
-    gimatria(text,textC);
+    allToLitel(word,wordC);
+    allToLitel(text,textC);
 
     value =  Value(wordC);
  
     while(text[i])
     {
         j = i;
+
         clean(read);
+
         if(textC[i]<'a' || textC[i]>'z')
         {
             i++;
             continue;
         }
 
-        while(sum<value)
+        while(sum<value && text[j]!='~')
         {
             if(textC[j]>='a' && textC[j]<='z')
             {
             sum+=(textC[j]-96);
-            // printf("%d\n",sum);
             }
 
             read[p] = text[j];
 
             if(sum==value)
             {
-                p++;
-                read[p]='~';
-                printf("%s",read);
-                // strcpy(read,res+k);
-                // k=arr_size(read);
+                read[++p]='~';
+                read[++p]='\0';
+                while(c<p){
+                    res[k++] = read[c++];
+                }
+                res[k] = read[c];
+                c = 0;
                 break;
             }
             j++;
@@ -76,14 +80,9 @@ void gimatria1(char* word, char* text){
         p=0;
         i++;
     }
-
-    // printf("\n");
-    // int n = arr_size(res);
-    // res[n-1] = '\0';
-    // printf("%s\n",res);
+    res[k-1] = '\0';
+    printf("%s",res);
 }
-
-
 
 
 int Value(char* word){
@@ -114,14 +113,3 @@ void clean(char* read){
     }
 
 
-
-int arr_size(char* text){
-    int i = 0;
-    int counter = 0;
-
-    while(text[i]){
-        counter++;
-        i++;
-    }
-    return counter;
-}

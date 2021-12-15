@@ -5,19 +5,35 @@ int main(){
     char word[WORD];
     char text[TXT];
 
+
     scanf("%[^\n]s" , word);
     getchar();
     scanf("%[^\n]s" , text);
 
 
     //gimatria
-    gimatria1(word,text);
+    printf("Gematria Sequences:"); 
 
-// A sailor went to sea, sea, sea To see what he could see, see, see But all that he could see, see, see Was the bottom of the deep blue sea, sea, sea!~
+//example:
+
+//     char word [] = "Head";
+//     char text [] ="Head, shoulders, knees and toes,\n"
+// "Knees and toes.\n"
+// "Head, shoulders, knees and toes,\n"
+// "Knees and toes.\n"
+// "And eyes, and ears, and mouth, and nose.\n"
+// "Head, shoulders, knees and toes,"
+// "Knees and toes.~";
+
+    gimatria(word,text);
+    
+
+
+
+
+
 
    //atbash
-
-
 
 // void toLowerCase(char* word){
 
@@ -29,4 +45,7 @@ int main(){
 //     }
     
 // }
+
+
+
 }
