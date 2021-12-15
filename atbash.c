@@ -3,6 +3,7 @@
 #include <string.h>
 #include <ctype.h>
 #include <stdlib.h>
+#include "functions.h"
 
 char** makeAtbashWord(char** word) {
     char** atbashWord = malloc(strlen(word) * sizeof(char*));
@@ -13,5 +14,10 @@ char** makeAtbashWord(char** word) {
         i++;
     }
     return atbashWord;
+}
+
+void atbash(char** word, char ** text) {
+
+    char copyW[]
 }
 

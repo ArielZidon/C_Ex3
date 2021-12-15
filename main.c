@@ -1,18 +1,18 @@
 #include <stdio.h>
 #include "gimatria.h"
 
-int main(){
+int main() {
     char word[WORD];
     char text[TXT];
 
 
-    scanf("%[^\n]s" , word);
+    scanf("%[^\n]s", word);
     getchar();
-    scanf("%[^\n]s" , text);
+    scanf("%[^\n]s", text);
 
 
     //gimatria
-    printf("Gematria Sequences:"); 
+    printf("Gematria Sequences:");
 
 //example:
 
@@ -25,27 +25,9 @@ int main(){
 // "Head, shoulders, knees and toes,"
 // "Knees and toes.~";
 
-    gimatria(word,text);
-    
+    gimatria(word, text);
 
-
-
-
-
-
-   //atbash
-
-// void toLowerCase(char* word){
-
-//     int i = 0;
-
-//     while(word[i]){
-//         word[i]=tolower(word[i]);
-//         i++;
-//     }
-    
-// }
-
+// atbash
 
 
 }
