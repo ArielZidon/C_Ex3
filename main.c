@@ -9,9 +9,21 @@ int main(){
     getchar();
     scanf("%[^\n]s" , text);
 
+
     //gimatria
-    gimatria1(word,text);
-    
-    
+    gematria(word,text);
+
+   //atbash
+
 }
 
+void toLowerCase(char* word){
+
+    int i = 0;
+
+    while(word[i]){
+        word[i]=tolower(word[i]);
+        i++;
+    }
+    
+}

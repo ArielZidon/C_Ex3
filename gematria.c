@@ -3,20 +3,9 @@
 #include <string.h>
 #include <ctype.h>
 
-void gimatria(char* word , char* copy){
 
-    strcpy(copy,word);
-    int i = 0;
-
-    while(copy[i]){
-        copy[i]=tolower(copy[i]);
-        i++;
-    }
-    
-}
-
-void gimatria1(char* word, char* text){
-    int finel = 0;
+void gematria(char* word, char* text){
+    int final = 0;
     
     int i = 0;
     int j = 0;
@@ -31,8 +20,11 @@ void gimatria1(char* word, char* text){
 
     char wordC [31];
     char textC [1024];
-    gimatria(word,wordC);
-    gimatria(text,textC);
+   
+    strcpy(wordC, word);
+    strcpy(textC,text);
+    toLowerCase(wordC);
+    toLowerCase(textC);
     value =  Value(wordC);
 
     
