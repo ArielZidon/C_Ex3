@@ -77,7 +77,7 @@ void gimatria1(char* word, char* text){
         i++;
     }
 
-    printf("\n");
+    // printf("\n");
     // int n = arr_size(res);
     // res[n-1] = '\0';
     // printf("%s\n",res);

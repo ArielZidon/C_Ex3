@@ -13,12 +13,7 @@ int main(){
     //gimatria
     gimatria1(word,text);
 
-// One, two, three, four, five, Once I caught a fish alive, Six, seven, eight, nine, ten, Then I let go again.~
-
-// Gematria Sequences: hree, f~fou~five~ve,
-// O~e,
-// Once~ce I cau~ght a f~fish~ht, n~nine~n,
-// Th~t go
+// A sailor went to sea, sea, sea To see what he could see, see, see But all that he could see, see, see Was the bottom of the deep blue sea, sea, sea!~
 
    //atbash
 
