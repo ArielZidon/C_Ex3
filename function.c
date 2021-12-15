@@ -9,15 +9,16 @@ void gimatria(char* word , char* copy){
     int i = 0;
 
     while(copy[i]){
-        copy[i]=tolower(copy[i]);
+        if(copy[i]>='A' && copy[i]<='Z')
+        {
+        copy[i]=copy[i]+32;
+        }
         i++;
     }
     
 }
 
 void gimatria1(char* word, char* text){
-    int finel = 0;
-    
     int i = 0;
     int j = 0;
     int p = 0;
@@ -29,25 +30,27 @@ void gimatria1(char* word, char* text){
     char read [30];
     char res [1024];
 
-    char wordC [31];
+    char wordC [30];
     char textC [1024];
+
     gimatria(word,wordC);
     gimatria(text,textC);
+
     value =  Value(wordC);
 
     
-    while(text[i]!='~')
+    while(text[i])
     {
 
         j = i;
         
-        if((textC[i]<'a' || textC[i]>'z') && textC[i]==textC[j])
+        if(textC[i]<'a' || textC[i]>'z')
         {
             i++;
             continue;
         }
         
-        while(textC[j]!='~')
+        while(textC[j])
         {
 
             if(textC[j]>='a' && textC[j]<='z')
@@ -104,7 +107,6 @@ void clean(char* read){
         read[i] = '\0';
         i++;
     }
-    read[0] = '\n';
 }
 
 int arr_size(char* text){

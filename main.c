@@ -11,6 +11,6 @@ int main(){
 
     //gimatria
     gimatria1(word,text);
-        
+
 }
 
