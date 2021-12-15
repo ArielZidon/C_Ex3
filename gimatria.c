@@ -41,7 +41,7 @@ void gimatria(char* word, char* text){
 
     value =  Value(wordC);
  
-    while(text[i])
+    while(text[i] && text[i]!='~')
     {
         j = i;
 
@@ -63,7 +63,7 @@ void gimatria(char* word, char* text){
             read[p] = text[j];
 
             if(sum==value)
-            {
+            {   
                 read[++p]='~';
                 read[++p]='\0';
                 while(c<p){
