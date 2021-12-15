@@ -3,8 +3,8 @@
 #include <string.h>
 #include <ctype.h>
 
-void gimatria(char* word , char* copy){
 
+<<<<<<< HEAD:function.c
     strcpy(copy,word);
     int i = 0;
 
@@ -19,6 +19,11 @@ void gimatria(char* word , char* copy){
 }
 
 void gimatria1(char* word, char* text){
+=======
+void gematria(char* word, char* text){
+    int final = 0;
+    
+>>>>>>> 5b50864bc081a1b77c33296bd00f41337c09fbae:gematria.c
     int i = 0;
     int j = 0;
     int p = 0;
@@ -32,10 +37,18 @@ void gimatria1(char* word, char* text){
 
     char wordC [30];
     char textC [1024];
+<<<<<<< HEAD:function.c
 
     gimatria(word,wordC);
     gimatria(text,textC);
 
+=======
+   
+    strcpy(wordC, word);
+    strcpy(textC,text);
+    toLowerCase(wordC);
+    toLowerCase(textC);
+>>>>>>> 5b50864bc081a1b77c33296bd00f41337c09fbae:gematria.c
     value =  Value(wordC);
 
     
