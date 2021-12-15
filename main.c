@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "function.h"
+#include "gimatria.h"
 
 int main(){
     char word[WORD];
