@@ -5,77 +5,77 @@
 
 
 void angram(char* word,char* text){
-int i = 0;
-int j = 0;
-int p = 0;
-int c = 0;
-int state = 0;
-int word_vul = 0;
-word_vul = ValueAng(word);
-int check = word_vul;
+    int i = 0;
+    int j = 0;
+    int p = 0;
+    int c = 0;
+    int state = 0;
+    int word_vul = 0;
+    word_vul = ValueAng(word);
+    int check = word_vul;
 
-char wordA[WORD];
-char textA[TXT];
-char temp[32];
-char res[1024];
+    char wordA[WORD];
+    char textA[TXT];
+    char temp[32];
+    char res[1024];
 
-strcpy(wordA,word);
-strcpy(textA,text);
+    strcpy(wordA,word);
+    strcpy(textA,text);
 
-while(textA[i] && textA[i]!='~'){
-    
-    j=i;
-   
-    if(wordA[p]==textA[i])
-    {   
-        temp[c++] = textA[j++];
-        shrink(wordA,p);
-        p = 0;
-        check--;
+    while(textA[i] && textA[i]!='~'){
 
-        while(textA[j]!='~' && p<=check)
+        j=i;
+
+        if(wordA[p]==textA[i])
         {
-            if(textA[j]==' ')
-            {
             temp[c++] = textA[j++];
-            }
-            
-            if(wordA[p]==textA[j]){
-                temp[c++] = textA[j++];
-                shrink(wordA,p);
-                check--;
-                p = 0;
-                if(check==1 && wordA[0]==textA[j])
-                {   
-                    temp[c] = textA[j];
-                    temp[++c] = '~';
-                    temp[++c] = '\0';
-                    while(p<c){
-                        res[state++] = temp[p++];
-                    }
-                    p = 0;
-                    break;
-                }
-                continue;
-            }
-            p++;
-        }
-        p = 0;
-        c = 0;
-        check = word_vul;
-        strcpy(wordA,word);
-        i++;
-        continue;
-    }
+            shrink(wordA,p);
+            p = 0;
+            check--;
 
-    p++;
-    if(wordA[p]=='\0'){
-        p = 0;
-        i++;
+            while(textA[j]!='~' && p<=check)
+            {
+                if(textA[j]==' ')
+                {
+                    temp[c++] = textA[j++];
+                }
+
+                if(wordA[p]==textA[j]){
+                    temp[c++] = textA[j++];
+                    shrink(wordA,p);
+                    check--;
+                    p = 0;
+                    if(check==1 && wordA[0]==textA[j])
+                    {
+                        temp[c] = textA[j];
+                        temp[++c] = '~';
+                        temp[++c] = '\0';
+                        while(p<c){
+                            res[state++] = temp[p++];
+                        }
+                        p = 0;
+                        break;
+                    }
+                    continue;
+                }
+                p++;
+            }
+            p = 0;
+            c = 0;
+            check = word_vul;
+            strcpy(wordA,word);
+            i++;
+            continue;
+        }
+
+        p++;
+        if(wordA[p]=='\0'){
+            p = 0;
+            i++;
+        }
     }
-}
-res[state-1] ='\0';
-printf("%s",res);
+    res[state-1] ='\0';
+    printf("%s",res);
 }
 
 
