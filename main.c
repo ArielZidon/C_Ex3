@@ -1,7 +1,21 @@
 #include <stdio.h>
 #include "gimatria.h"
+#include "angram.h"
 
 int main(){
+
+    //example:
+
+//     char word [] = "Head";
+//     char text [] ="Head, shoulders, knees and toes,\n"
+// "Knees and toes.\n"
+// "Head, shoulders, knees and toes,\n"
+// "Knees and toes.\n"
+// "And eyes, and ears, and mouth, and nose.\n"
+// "Head, shoulders, knees and toes,"
+// "Knees and toes.~";
+
+
     char word[WORD];
     char text[TXT];
 
@@ -13,23 +27,8 @@ int main(){
 
     //gimatria
     printf("Gematria Sequences:"); 
-
-//example:
-
-//     char word [] = "Head";
-//     char text [] ="Head, shoulders, knees and toes,\n"
-// "Knees and toes.\n"
-// "Head, shoulders, knees and toes,\n"
-// "Knees and toes.\n"
-// "And eyes, and ears, and mouth, and nose.\n"
-// "Head, shoulders, knees and toes,"
-// "Knees and toes.~";
-
     gimatria(word,text);
     
-
-
-
 
 
 
@@ -45,6 +44,12 @@ int main(){
 //     }
     
 // }
+
+
+    //angram
+    printf("Anagram Sequences: ");
+    angram(word,text);
+
 
 
 
