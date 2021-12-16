@@ -1,7 +1,9 @@
 #include <stdio.h>
-#include "angram.h"
 #include <string.h>
 #include <ctype.h>
+#include "functions.h"
+#define WORD 30
+#define TXT 1024
 
 
 void angram(char* word,char* text){

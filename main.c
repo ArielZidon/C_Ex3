@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include "functions.h"
-#include "angram.h"
+
+#define TXT 1024
+#define WORD 30
 
 int main(){
 
@@ -16,35 +18,23 @@ int main(){
 "Knees and toes.~";
 
 
-    // char word[WORD];
-    // char text[TXT];
-
-
-    // scanf("%[^\n]s" , word);
-    // getchar();
-    // scanf("%[^\n]s" , text);
+//     char word[];
+//     char text[];
+//
+//
+//     scanf("%[^\n]s" , word);
+//     getchar();
+//     scanf("%[^\n]s" , text);
 
 
     //gimatria
-    // printf("Gematria Sequences:"); 
-    // gematria(word,text);
+    printf("Gematria Sequences: ");
+    gematria(word,text);
     
-
-
-
-   //atbash
-
-// void toLowerCase(char* word){
-
-//     int i = 0;
-
-//     while(word[i]){
-//         word[i]=tolower(word[i]);
-//         i++;
-//     }
-    
-// }
-
+     //atbash
+    printf("Atbash Sequences: ");
+    char* result = atbash(word, text);
+    printf("%s", result);
 
     //angram
     printf("Anagram Sequences: ");
