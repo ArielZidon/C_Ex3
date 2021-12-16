@@ -16,8 +16,8 @@ int main(){
 // "Knees and toes.~";
 
 
-    char word[WORD];
-    char text[TXT];
+    char word[];
+    char text[];
 
 
     scanf("%[^\n]s" , word);
@@ -26,24 +26,16 @@ int main(){
 
 
     //gimatria
-    printf("Gematria Sequences:"); 
+    printf("Gematria Sequences: ");
     gematria(word,text);
+    printf("\n");
     
 
 
 
    //atbash
-
-// void toLowerCase(char* word){
-
-//     int i = 0;
-
-//     while(word[i]){
-//         word[i]=tolower(word[i]);
-//         i++;
-//     }
-    
-// }
+    printf("Atbash Sequences: ");
+    printf("%s", atbash(word, text));
 
 
     //angram

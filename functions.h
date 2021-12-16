@@ -13,6 +13,18 @@ void clean(char* res);
 
 char** makeAtbashWord(char** word);
 
+void atbash(char** word, char** text);
+
+int contains(char** word, char* letter);
+
+void angram(char* word , char* text);
+
+int ValueAng(char* word);
+
+void shrink(char* word,int p);
+
+
+
 
 
 
