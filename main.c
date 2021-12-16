@@ -30,11 +30,13 @@ int main(){
     //gimatria
     printf("Gematria Sequences: ");
     gematria(word,text);
+    printf("\n");
     
      //atbash
     printf("Atbash Sequences: ");
     char* result = atbash(word, text);
     printf("%s", result);
+    printf("\n");
 
     //angram
     printf("Anagram Sequences: ");
