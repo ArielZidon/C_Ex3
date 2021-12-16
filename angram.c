@@ -9,8 +9,6 @@ int i = 0;
 int j = 0;
 int p = 0;
 int c = 0;
-int f = 0;
-int until = 0;
 int state = 0;
 int word_vul = 0;
 word_vul = ValueAng(word);
@@ -34,7 +32,7 @@ while(textA[i] && textA[i]!='~'){
         shrink(wordA,p);
         p = 0;
         check--;
-        
+
         while(textA[j]!='~' && p<=check)
         {
             if(textA[j]==' ')
@@ -48,7 +46,7 @@ while(textA[i] && textA[i]!='~'){
                 check--;
                 p = 0;
                 if(check==1 && wordA[0]==textA[j])
-                {   until++;
+                {   
                     temp[c] = textA[j];
                     temp[++c] = '~';
                     temp[++c] = '\0';
