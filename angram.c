@@ -11,7 +11,7 @@ int p = 0;
 int c = 0;
 int f = 0;
 int word_vul = 0;
-word_vul = Value(word);
+word_vul = ValueAng(word);
 int check = word_vul;
 
 char wordA[WORD];
@@ -82,7 +82,7 @@ while(textA[i] && textA[i]!='~'){
 
 
 
-int Value(char* word){
+int ValueAng(char* word){
 
     int i = 0;
 

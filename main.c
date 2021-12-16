@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "gimatria.h"
+#include "functions.h"
 #include "angram.h"
 
 int main(){
@@ -27,7 +27,7 @@ int main(){
 
     //gimatria
     printf("Gematria Sequences:"); 
-    gimatria(word,text);
+    gematria(word,text);
     
 
 
@@ -54,3 +54,6 @@ int main(){
 
 
 }
+
+
+

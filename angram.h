@@ -5,6 +5,6 @@
 
 void angram(char* word , char* text);
 
-int Value(char* word);
+int ValueAng(char* word);
 
 void shrink(char* word,int p);
