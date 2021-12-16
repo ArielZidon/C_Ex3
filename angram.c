@@ -9,7 +9,7 @@ int i = 0;
 int j = 0;
 int p = 0;
 int c = 0;
-int f = 0;
+int state = 0;
 int word_vul = 0;
 word_vul = ValueAng(word);
 int check = word_vul;
@@ -28,36 +28,32 @@ while(textA[i] && textA[i]!='~'){
    
     if(wordA[p]==textA[i])
     {   
-        temp[c] = textA[j];
+        temp[c++] = textA[j++];
         shrink(wordA,p);
         p = 0;
         check--;
-        c++;
-        j++;
-       
+
         while(textA[j]!='~' && p<=check)
         {
             if(textA[j]==' ')
             {
-            temp[c] = textA[j];
-            c++;
-            j++;
+            temp[c++] = textA[j++];
             }
             
             if(wordA[p]==textA[j]){
-                temp[c] = textA[j];
+                temp[c++] = textA[j++];
                 shrink(wordA,p);
                 check--;
                 p = 0;
-                j++;
-                c++;
-                
                 if(check==1 && wordA[0]==textA[j])
-                {  
+                {   
                     temp[c] = textA[j];
-                    temp[word_vul] = '~';
-                    temp[word_vul+1] = '\0';
-                    printf("%s",temp);
+                    temp[++c] = '~';
+                    temp[++c] = '\0';
+                    while(p<c){
+                        res[state++] = temp[p++];
+                    }
+                    p = 0;
                     break;
                 }
                 continue;
@@ -78,6 +74,8 @@ while(textA[i] && textA[i]!='~'){
         i++;
     }
 }
+res[state-1] ='\0';
+printf("%s",res);
 }
 
 
