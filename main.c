@@ -27,24 +27,20 @@ int main(){
 //     scanf("%[^\n]s" , text);
 
 
-    //gimatria
+    // gimatria
     printf("Gematria Sequences: ");
     gematria(word,text);
     printf("\n");
     
-     //atbash
-    printf("Atbash Sequences: ");
-    char* result = atbash(word, text);
-    printf("%s", result);
+    //atbash
+    printf("Atbash Sequences: ");   
+    atbash(word, text);
+    // // printf("%s", result);
     printf("\n");
 
-    //angram
+    // angram
     printf("Anagram Sequences: ");
     angram(word,text);
-
-
-
-
 }
 
 

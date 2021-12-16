@@ -105,11 +105,10 @@ void clean(char* read){
 
     int i = 0;
 
-    while(read[i]){
+    while(read[i] && i != strlen(read)){
         read[i] = '\0';
         i++;
     }
-
-    }
+}
 
 

@@ -13,7 +13,7 @@ void clean(char* res);
 
 void makeAtbashWord(char* word, char* atbashWord);
 
-char* atbash(char* word, char* text);
+void atbash(char* word, char* text);
 
 int contains(char* word, char* letter);
 
