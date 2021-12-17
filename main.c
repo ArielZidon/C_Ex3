@@ -8,18 +8,32 @@ int main(){
 
     //example:
 
-    char word [] = "abcd";
-    char text [] ="a-bc,dbca-zwxyzabzyxw0dcba~";
+    // char word [] = "abcd";
+    // char text [] ="a-bc,dbca-zwxyzabzyxw0dcba~";
 
+    char word[WORD];
+    char text[TXT];
+    int i = 0;
+    char ch;
 
-//     char word[];
-//     char text[];
-//
-//
-//     scanf("%[^\n]s" , word);
-//     getchar();
-//     scanf("%[^\n]s" , text);
-
+    // get word
+    ch = getchar();
+    while (ch != ' ' && ch != '\t' && ch != '\n')
+    {
+        word[i++] = ch;
+        ch = getchar();
+    }
+    printf("%s", word);
+    
+    // get text
+    i = 0;
+    ch = getchar();
+    while (ch != '~')
+    {
+        text[i++] = ch;
+        ch = getchar();
+    }
+    printf("%s", text);
 
     // gimatria
     printf("Gematria Sequences: ");
