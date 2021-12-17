@@ -11,11 +11,11 @@ int Value(char* word);
 
 void clean(char* res);
 
-void makeAtbashWord(char* word, char* atbashWord);
+char* makeAtbashWord(char* word);
 
 void atbash(char* word, char* text);
 
-int contains(char* word, char* letter);
+int contains(char* word, char letter);
 
 void angram(char* word , char* text);
 
@@ -23,6 +23,7 @@ int ValueAng(char* word);
 
 void shrink(char* word,int p);
 
+int charValue(char ch);
 
 
 

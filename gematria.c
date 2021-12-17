@@ -92,7 +92,7 @@ int Value(char* word){
     while(word[i] && word[i] != '~'){
         if(word[i]>='a' && word[i]<='z')
         {
-        sum+=(word[i]-96);
+          sum+=(word[i]-96);
         }
         i++;
     }

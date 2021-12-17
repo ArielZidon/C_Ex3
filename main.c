@@ -22,9 +22,9 @@ int main(){
 
 
     // gimatria
-    // printf("Gematria Sequences: ");
-    // gematria(word,text);
-    // printf("\n");
+    printf("Gematria Sequences: ");
+    gematria(word,text);
+    printf("\n");
     
     //atbash
     printf("Atbash Sequences: ");   
@@ -33,8 +33,9 @@ int main(){
     printf("\n");
 
     // angram
-    // printf("Anagram Sequences: ");
-    // angram(word,text);
+    printf("Anagram Sequences: ");
+    angram(word,text);
+    printf("\n");
 }
 
 
