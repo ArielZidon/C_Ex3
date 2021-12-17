@@ -23,7 +23,6 @@ int main(){
         word[i++] = ch;
         ch = getchar();
     }
-    printf("%s", word);
     
     // get text
     i = 0;
@@ -33,7 +32,6 @@ int main(){
         text[i++] = ch;
         ch = getchar();
     }
-    printf("%s", text);
 
     // gimatria
     printf("Gematria Sequences: ");
