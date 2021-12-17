@@ -14,7 +14,6 @@
      int i = 0;
      while (word[i] && i != strlen(word))
      {
-         printf("make");
          atbashWord[i] = 'z' - (word[i]) + 'a';
          i++;
      }
@@ -71,7 +70,6 @@
 //  }
 
 void atbash(char* word, char* text) {
-    int gimValue = Value(word);
     char copyW[WORD];
      char copyT[TXT];
      char foundChar[WORD];
@@ -79,40 +77,32 @@ void atbash(char* word, char* text) {
 
      allToLower(word, copyW);
      allToLower(text, copyT);
-     printf("%s\n", copyW);
-     printf("%s\n", copyT);
+
      makeAtbashWord(word, copyW);
      makeAtbashWord(text, copyT);
     // printf("%s\n", copyW);
     //  printf("%s\n", copyT);
-    int sum = 0;
     int i = 0;
     int j = 0;
-    while (i < strlen(text)) 
+    int counter = 0;
+    while (copyT[i]) 
     {
-        sum += copyT[i];
-        if (sum == gimValue)
-        {
-            if (copyT[j] != ' ')
-            {
-                if (contains(copyW, &copyT[i]) && !contains(foundChar, &copyT[i]))
-                {
-                    foundChar[j] = copyT[i];
-                    // printf("%d\n", foundChar[j]);
-                    // printf("%d\n", copyT[i]);
-                }
-                j++;
-            }
+        for(int p = 0; copyW[p] != '\0' || foundChar[p] != '\0'; p++){     
+            if(strcmp(&copyW[p], &foundChar[p]) && 'a' < copyT[j] && copyT[j] < 'z') {      
+                 counter++;        
+                }        
         }
-        if (strlen(foundChar) == strlen(copyW))
-        {
-            // printf("%s", "~");
-            // printf("%s", foundChar);
-            j = 0;
-            sum = 0;
+        if (counter == strlen(word))
+       {
+            printf("~");
+             printf("%s", foundChar);
+            clean(foundChar);
+            counter = 0;
         }
         i++;
     }
 }
+        
+
  
 

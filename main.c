@@ -8,14 +8,8 @@ int main(){
 
     //example:
 
-    char word [] = "Head";
-    char text [] ="Head, shoulders, knees and toes,\n"
-"Knees and toes.\n"
-"Head, shoulders, knees and toes,\n"
-"Knees and toes.\n"
-"And eyes, and ears, and mouth, and nose.\n"
-"Head, shoulders, knees and toes,"
-"Knees and toes.~";
+    char word [] = "abcd";
+    char text [] ="a-bc,dbca-zwxyzabzyxw0dcba~";
 
 
 //     char word[];
@@ -28,9 +22,9 @@ int main(){
 
 
     // gimatria
-    printf("Gematria Sequences: ");
-    gematria(word,text);
-    printf("\n");
+    // printf("Gematria Sequences: ");
+    // gematria(word,text);
+    // printf("\n");
     
     //atbash
     printf("Atbash Sequences: ");   
@@ -39,8 +33,8 @@ int main(){
     printf("\n");
 
     // angram
-    printf("Anagram Sequences: ");
-    angram(word,text);
+    // printf("Anagram Sequences: ");
+    // angram(word,text);
 }
 
 
