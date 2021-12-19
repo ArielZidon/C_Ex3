@@ -8,8 +8,8 @@ int main(){
 
     //example:
 
-    // char word [] = "abcd";
-    // char text [] ="a-bc,dbca-zwxyzabzyxw0dcba~";
+    // char word [] = "sea";
+    // char text [] = "A sailor went to sea, sea, sea To see what he could see, see, see But all that he could see, see, seeWas the bottom of the deep blue sea, sea, sea!~";
 
     char word[WORD];
     char text[TXT];
