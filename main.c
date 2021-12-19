@@ -8,8 +8,8 @@ int main(){
 
     //example:
 
-    // char word [] = "sea";
-    // char text [] = "A sailor went to sea, sea, sea To see what he could see, see, see But all that he could see, see, seeWas the bottom of the deep blue sea, sea, sea!~";
+    // char word [] = "sheep";
+    // char text [] = "Baa, baa black sheep Have you any wool Yes sir, yes sir Three bags full.~ One for my master And one for my dame And one for the little boy Who lives down the lane";
 
     char word[WORD];
     char text[TXT];
@@ -39,18 +39,18 @@ int main(){
     // gimatria
     printf("Gematria Sequences: ");
     gematria(word,text);
-    printf("\n");
+    // printf("\n");
     
     //atbash
     printf("Atbash Sequences: ");   
     atbash(word, text);
     // // printf("%s", result);
-    printf("\n");
+    // printf("\n");
 
     // angram
     printf("Anagram Sequences: ");
     angram(word,text);
-    printf("\n");
+    // printf("\n");
 }
 
 
