@@ -16,23 +16,25 @@ int main(){
     int i = 0;
     char ch;
 
-    // get word
+    int counter = 0;
     ch = getchar();
-    while (ch != ' ' && ch != '\t' && ch != '\n')
-    {
-        word[i++] = ch;
+    while(ch!=' ' && ch!='\t' && ch!='\n'){
+        word[counter] = ch;
         ch = getchar();
+        counter++;
     }
     
     // get text
     i = 0;
     ch = getchar();
    
-    do
-    {
+    counter = 0;
+    ch = getchar();
+    while(ch!='~'){
+        text[counter] = ch;
         ch = getchar();
-        text[i++] = ch;
-    } while (ch != '~');
+        counter++;
+    }
 
     // gimatria
     printf("Gematria Sequences: ");
