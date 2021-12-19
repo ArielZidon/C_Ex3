@@ -31,6 +31,7 @@ int main(){
         ch = getchar();
         i++;
     }
+    text[i] = '~';
 
     // gimatria
     printf("Gematria Sequences: ");
