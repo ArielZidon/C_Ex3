@@ -16,41 +16,37 @@ int main(){
     int i = 0;
     char ch;
 
-    int counter = 0;
     ch = getchar();
     while(ch!=' ' && ch!='\t' && ch!='\n'){
-        word[counter] = ch;
+        word[i] = ch;
         ch = getchar();
-        counter++;
+        i++;
     }
     
     // get text
     i = 0;
     ch = getchar();
-   
-    counter = 0;
-    ch = getchar();
     while(ch!='~'){
-        text[counter] = ch;
+        text[i] = ch;
         ch = getchar();
-        counter++;
+        i++;
     }
 
     // gimatria
     printf("Gematria Sequences: ");
     gematria(word,text);
-    // printf("\n");
+    printf("\n");
     
     //atbash
     printf("Atbash Sequences: ");   
     atbash(word, text);
     // // printf("%s", result);
-    // printf("\n");
+    printf("\n");
 
     // angram
     printf("Anagram Sequences: ");
     angram(word,text);
-    // printf("\n");
+//     // printf("\n");
 }
 
 
