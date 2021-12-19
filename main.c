@@ -27,11 +27,12 @@ int main(){
     // get text
     i = 0;
     ch = getchar();
-    while (ch != '~')
+   
+    do
     {
-        text[i++] = ch;
         ch = getchar();
-    }
+        text[i++] = ch;
+    } while (ch != '~');
 
     // gimatria
     printf("Gematria Sequences: ");
